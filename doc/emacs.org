@@ -1,40 +1,26 @@
 * Emacs使用
-
-** 配置~/.emacs.d/init.el
-*** 配置package
-#+begin_src lisp
-(require 'package)
-;; 国内源 http://elpa.emacs-china.org
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+** 常用命令
+   #+begin_example
+   M-x package-list-packages  查看包
+   #+end_example
+** emacs配置国内源
+   http://elpa.emacs-china.org
+   #+begin_src lisp
+   (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
                          ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-(package-initialize)
-#+end_src
-
-*** 基本配置
-#+begin_src lisp
-;;显示行号
-(global-linum-mode 1)
-
-;; 关闭工具栏
-(tool-bar-mode -1)
-
-;; 快捷键打开配置文件
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-(global-set-key (kbd "<f2>") 'open-init-file)
-#+end_src
-
-*** 配置use-package
+   #+end_src
+** 主题配置
+https://emacsthemes.com/
+** 使用Ivy增强emacs的功能
+https://github.com/abo-abo/swiper
+Emacs中许多默认功能使用起来都不是很方便，比如M-x不能自动补全，使用Ivy来增强emacs的功能。
+Ivy包含3个插件：Ivy、Counsel、Swiper
+*** 安装Ivy
+** use-package
 https://github.com/jwiegley/use-package
-#+begin_src lisp
-(if (not (package-installed-p 'use-package))
-    (progn
-      (package-refresh-contents)
-      (package-install 'use-package)))
-(require 'use-package)
-#+end_src
 
+** magit
+https://github.com/magit/magit
 
 ** 重新加载配置文件
 每次编辑完~/.emacs.d/init.el配置文件，是不会自动生效的，需要重新启动emacs。
