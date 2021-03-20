@@ -10,5 +10,11 @@
   (setq ivy-height 20)
   (setq ivy-count-format "%d/%d "))
 
+(use-package counsel
+  :ensure t
+  :bind*
+  (("M-x"     . counsel-M-x)
+   ("C-s"     . swiper)
+   ))
 
 (provide 'init-ivy)
