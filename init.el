@@ -22,6 +22,9 @@
 
 (require 'init-basic)
 
+;; 主题
+(require 'init-theme)
+
 ;; ivy
 (require 'init-ivy)
 
