@@ -17,5 +17,8 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f2>") 'open-init-file)
-  
+
+;; 默认窗口最大
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (provide 'init-basic)
