@@ -2,6 +2,7 @@
 ;;; http://oremacs.com/swiper/#installation
 
 (use-package ivy
+  :ensure t
   :diminish (ivy-mode . "")
   :init (ivy-mode 1)
   :config

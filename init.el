@@ -1,9 +1,10 @@
 (require 'package)
 
 ;; 国内源
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")			
-                         ("melpa" . "http://elpa.emacs-china.org/melpa/")
-			 ))
+(setq package-archives
+      '(("gnu"   . "http://elpa.emacs-china.org/gnu/")			
+	("melpa" . "http://elpa.emacs-china.org/melpa/")
+	))
 
 (package-initialize)
 
@@ -34,15 +35,10 @@
 (require 'use-package)
 
 ;; 加载./lisp/* 配置文件
-;;(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 ;; ivy
-;;(require 'init-ivy)
+(require 'init-ivy)
 
-;; magit git管理工具
-;; https://github.com/magit/magit
-(use-package magit
-  :ensure t
-  :bind (("C-x g" . magit-status)))
-
-
+;; git
+(require 'init-git)
