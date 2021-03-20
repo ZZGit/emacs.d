@@ -1,0 +1,54 @@
+* Emacs使用
+
+** 配置~/.emacs.d/init.el
+*** 配置package
+#+begin_src lisp
+(require 'package)
+;; 国内源 http://elpa.emacs-china.org
+(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+                         ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+(package-initialize)
+#+end_src
+
+*** 基本配置
+#+begin_src lisp
+;;显示行号
+(global-linum-mode 1)
+
+;; 关闭工具栏
+(tool-bar-mode -1)
+
+;; 快捷键打开配置文件
+(defun open-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+(global-set-key (kbd "<f2>") 'open-init-file)
+#+end_src
+
+*** 配置use-package
+https://github.com/jwiegley/use-package
+#+begin_src lisp
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
+(require 'use-package)
+#+end_src
+
+
+** 重新加载配置文件
+每次编辑完~/.emacs.d/init.el配置文件，是不会自动生效的，需要重新启动emacs。
+但是每次重新启动emacs确实挺麻烦的，可以通过下面两个方法是配置文件生效
+1. 使用`M-x load-file` 来重新加载配置
+2. 使用`C-x C-e` 执行配置文件中lisp代码 
+
+** 使用中遇到的问题
+*** org-model <s + tab 不起作用了
+https://orgmode.org/Changes_old.html
+Change in the structure template expansion
+Org 9.2 comes with a new template expansion mechanism, combining org-insert-structure-template bound to C-c C-,.
+If you customized the org-structure-template-alist option manually, you probably need to udpate it, see the docstring for accepted values.
+If you prefer using previous patterns, e.g. <s, you can activate them again by requiring Org Tempo library:
+(require 'org-tempo)
+or add it to org-modules.
+If you need complex templates, look at the tempo-define-template function or at solutions like Yasnippet.
