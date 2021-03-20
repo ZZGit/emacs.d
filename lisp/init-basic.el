@@ -18,11 +18,8 @@
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f2>") 'open-init-file)
 
-
 ;; 主题
-(use-package spacemacs-theme
-  :ensure t
-  :init
-  (load-theme 'spacemacs-dark t))
+(load-theme 'spacemacs-dark t)
+  
 
 (provide 'init-basic)
