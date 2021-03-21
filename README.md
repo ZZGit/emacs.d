@@ -1,6 +1,6 @@
-# My Emacs Config
+# 我的Emacs
 
-```
+```shell
 git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 ```
 
@@ -8,6 +8,7 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 
 ### 通用操作
 | 快捷键  | 命令                    | 说明              |
+|---------|-------------------------|-------------------|
 | C-x C-c | save-buffers-kill-emacs | 退出并保存        |
 | C-/     | undo-tree-undo          | 撤销操作          |
 | C-?     | undo-tree-redo          | 恢复操作          |
@@ -15,5 +16,6 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 
 ### Markdown
 | 快捷键  | 命令                  | 说明     |
+|---------|-----------------------|----------|
 | C-c C-l | markdown-insert-link  | 插入链接 |
 | C-c C-i | markdown-insert-image | 插入图片 |
