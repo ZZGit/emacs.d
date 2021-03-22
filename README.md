@@ -19,3 +19,7 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 |---------|-----------------------|----------|
 | C-c C-l | markdown-insert-link  | 插入链接 |
 | C-c C-i | markdown-insert-image | 插入图片 |
+
+### pareidt
+| 快捷键 | 命令 | 说明 |
+| C-M-d  |      |      |
