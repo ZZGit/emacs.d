@@ -17,6 +17,19 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+;; https://github.com/purcell/exec-path-from-shell
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac ns))
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
+;; https://wikemacs.org/wiki/Paredit-mode
+(use-package paredit
+  :ensure t
+  :init (paredit-mode 1)
+  :hook (emacs-lisp-mode-hook lisp-mode-hook lisp-interaction-mode-hook scheme-mode-hook))
+
 ;; 加载./lisp/* 配置文件
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -54,7 +67,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
+    (paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
