@@ -10,7 +10,8 @@
 (global-hl-line-mode 1)
 
 ;; org-mode从9.2之后，默认不在支持<s + tab的代码模板快捷键，需要手动开启
-(require 'org-tempo)
+(if (string> (org-version) "9.2.0")
+    (require 'org-tempo))
 
 ;; 快捷键f2打开配置文件
 (defun open-init-file()
