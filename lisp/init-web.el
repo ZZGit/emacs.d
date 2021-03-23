@@ -2,13 +2,15 @@
 ;; https://web-mode.org
 (use-package web-mode
   :ensure t
-  :mode "\\.html?\\'")
+  :mode "\\.html?\\'"
+  :bind (("TAB" . web-mode-fold-or-unfold)))
 
 ;; https://github.com/smihica/emmet-mode
 (use-package emmet-mode
   :ensure t
   :hook (sgml-mode-hook css-mode-hook web-mode-hook)
-  :config (emmet-mode 1))
+  :config (emmet-mode 1)
+  :bind (("C-j" . emmet-expand-line)))
 
 ;; https://github.com/mooz/js2-mode
 (use-package js2-mode

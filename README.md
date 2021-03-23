@@ -4,9 +4,9 @@
 git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 ```
 
-## 常用快捷键
+## 通用操作
 
-### 通用操作
+### 内置
 | 快捷键  | 命令                    | 说明                 |
 |---------|-------------------------|----------------------|
 | C-x C-c | save-buffers-kill-emacs | 退出并保存           |
@@ -33,15 +33,31 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 | C-?     | undo-tree-redo          | 恢复操作          |
 | C-x u   | undo-tree-visualize     | 图形撤销/恢复操作 |
 
-### [Markdown](https://jblevins.org/projects/markdown-mode/ "Markdown")
+## [Markdown](https://jblevins.org/projects/markdown-mode/ "Markdown")
 | 快捷键  | 命令                  | 说明     |
 |---------|-----------------------|----------|
 | C-c C-l | markdown-insert-link  | 插入链接 |
 | C-c C-i | markdown-insert-image | 插入图片 |
 
-### [Paredit](https://wikemacs.org/wiki/Paredit-mode "Paredit")
+## Clojure开发
+
+#### [Paredit](https://wikemacs.org/wiki/Paredit-mode "Paredit")
 | 快捷键 | 命令             | 说明           |
 |--------|------------------|----------------|
 | C-M-d  | down-list        | 移到下层表达式 |
 | C-M-u  | backward-up-list | 移到上层表达式 |
 |        |                  |                |
+
+## Web开发
+
+#### [web-mode](https://web-mode.org/)
+| 快捷键  | 命令                    | 说明             |
+|---------|-------------------------|------------------|
+| C-c C-s | web-mode-snippet-insert | 插入html模板代码 |
+| TAB     | web-mode-fold-or-unfold | 折叠/展开元素    |
+
+### [emmet-mode](https://github.com/smihica/emmet-mode)
+| 快捷键 | 命令              | 说明            |
+|--------|-------------------|-----------------|
+| C-j    | emmet-expand-line | 展开emmet表达式 |
+	
