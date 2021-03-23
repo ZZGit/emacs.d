@@ -17,6 +17,9 @@
    ("C-s"     . swiper)
    ))
 
+(use-package ag
+  :ensure t)
+
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
   :ensure t
