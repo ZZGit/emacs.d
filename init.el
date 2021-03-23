@@ -30,6 +30,11 @@
   :init (paredit-mode 1)
   :hook (emacs-lisp-mode-hook lisp-mode-hook lisp-interaction-mode-hook scheme-mode-hook))
 
+;; https://github.com/magnars/expand-region.el
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
+
 ;; 加载./lisp/* 配置文件
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -48,7 +53,7 @@
 ;; web开发
 (require 'init-web)
 
-;; undo
+;; undo-tree
 (require 'init-undotree)
 
 ;; markdown
@@ -67,7 +72,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
+    (expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
