@@ -11,11 +11,13 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 |---------|-------------------------|----------------------|
 | C-x C-c | save-buffers-kill-emacs | 退出并保存           |
 | C-h k   | describe-key            | 查看快捷键对应的命令 |
+| C-n     | make-frame              | 打开新的frame        |
+| s-`     | other-frame             | 切换frame            |
 
 ### [expand-region](https://github.com/magnars/expand-region.el)
-| 快捷键  | 命令                    | 说明                 |
-|---------|-------------------------|----------------------|
-| C-=     | expand-region           |                      |
+| 快捷键 | 命令          | 说明         |
+|--------|---------------|--------------|
+| C-=    | expand-region | 快速选中文本 |
 
 ### undo-tree
 | 快捷键  | 命令                    | 说明              |

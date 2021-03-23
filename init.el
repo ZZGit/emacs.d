@@ -35,6 +35,11 @@
   :ensure t
   :bind ("C-=" . er/expand-region))
 
+;; https://github.com/dimitri/switch-window#org1901772
+(use-package switch-window
+  :ensure t
+  :bind (("C-x o" . switch-window)))
+
 ;; 加载./lisp/* 配置文件
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -72,7 +77,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
+    (switch-window expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
