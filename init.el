@@ -24,12 +24,6 @@
   :config
   (exec-path-from-shell-initialize))
 
-;; https://wikemacs.org/wiki/Paredit-mode
-(use-package paredit
-  :ensure t
-  :init (paredit-mode 1)
-  :hook (emacs-lisp-mode-hook lisp-mode-hook lisp-interaction-mode-hook scheme-mode-hook))
-
 ;; https://github.com/magnars/expand-region.el
 (use-package expand-region
   :ensure t
@@ -77,7 +71,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile switch-window expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
+    (js2-refactor ac-js2 company auto-complete projectile switch-window expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

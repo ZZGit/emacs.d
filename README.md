@@ -54,7 +54,8 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 | 快捷键  | 命令                    | 说明             |
 |---------|-------------------------|------------------|
 | C-c C-s | web-mode-snippet-insert | 插入html模板代码 |
-| TAB     | web-mode-fold-or-unfold | 折叠/展开元素    |
+| C-c C-f | web-mode-fold-or-unfold | 折叠/展开元素    |
+| M-;     | comment-dwim            | 注释元素         |
 
 ### [emmet-mode](https://github.com/smihica/emmet-mode)
 | 快捷键 | 命令              | 说明            |

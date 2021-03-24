@@ -13,10 +13,10 @@
 (if (string> (org-version) "9.2.0")
     (require 'org-tempo))
 
-;; 快捷键f2打开配置文件
+;; 快捷键f2打开Reamde
 (defun open-init-file()
   (interactive)
-  (find-file "~/.emacs.d/init.el"))
+  (find-file "~/.emacs.d/README.md"))
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 ;; 默认窗口最大
