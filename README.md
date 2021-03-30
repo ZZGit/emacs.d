@@ -14,6 +14,9 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 | C-n     | make-frame              | 打开新的frame        |
 | s-`     | other-frame             | 切换frame            |
 | C-x h   |                         | 全选                 |
+| M->     | end-of-buffer           | 跳到文件末尾         |
+| M-<     | beginning-of-buffer     | 跳到文件开头         |
+
 
 ### [expand-region](https://github.com/magnars/expand-region.el)
 | 快捷键 | 命令          | 说明         |
