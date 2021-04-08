@@ -17,6 +17,13 @@ git clone git@gitee.com:strongfish/emacs.d.git ~/.emacs.d
 | M->     | end-of-buffer           | 跳到文件末尾         |
 | M-<     | beginning-of-buffer     | 跳到文件开头         |
 
+### [symbol-overlay](https://github.com/wolray/symbol-overlay)
+| 快捷键 | 命令                     | 说明     |
+|--------|--------------------------|----------|
+| M-i    | symbol-overlay-put       | 高亮标志 |
+| M-n    | symbol-overlay-jump-next |          |
+| M-p    | symbol-overlay-jump-prev |          |
+
 
 ### [expand-region](https://github.com/magnars/expand-region.el)
 | 快捷键 | 命令          | 说明         |

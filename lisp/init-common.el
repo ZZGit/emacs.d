@@ -36,4 +36,13 @@
   :config
   (setq projectile-completion-system 'ivy))
 
+;;https://github.com/wolray/symbol-overlay
+(use-package symbol-overlay
+  :ensure t
+  :bind (("M-i" . symbol-overlay-put)
+	 ("M-n" . symbol-overlay-jump-next)
+	 ("M-p" . symbol-overlay-jump-prev)
+	 ("<f7>" . symbol-overlay-mode)
+	 ("<f8>" . symbol-overlay-remove-all)))
+
 (provide 'init-common)
