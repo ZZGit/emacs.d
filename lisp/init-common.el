@@ -24,7 +24,7 @@
 (use-package company
   :ensure t
   :init (company-mode 1)
-  :hook (after-init-hook . global-company-mode))
+  :config (global-company-mode t))
 
 ;; https://github.com/bbatsov/projectile
 (use-package projectile

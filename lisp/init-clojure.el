@@ -16,4 +16,15 @@
     (add-hook 'clojurec-mode-hook 'paredit-mode)
     (add-hook 'cider-repl-mode-hook 'paredit-mode)))
 
+;;https://github.com/clojure-emacs/clj-refactor.el
+(use-package clj-refactor
+  :ensure t
+  :init
+  (add-hook 'clojure-mode-hook 'clj-refactor-mode)
+  :config
+  (clj-refactor-mode 1)
+  ;; Configure the Clojure Refactoring prefix:
+  (cljr-add-keybindings-with-prefix "C-c C-m")
+  :diminish clj-refactor-mode)
+
 (provide 'init-clojure)
