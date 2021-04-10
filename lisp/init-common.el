@@ -29,6 +29,7 @@
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
   :ensure t
+  :pin melpa-stable
   :init
   (projectile-mode +1)
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
@@ -44,5 +45,22 @@
 	 ("M-p" . symbol-overlay-jump-prev)
 	 ("<f7>" . symbol-overlay-mode)
 	 ("<f8>" . symbol-overlay-remove-all)))
+
+;; https://github.com/purcell/exec-path-from-shell
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac ns))
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
+;; https://github.com/magnars/expand-region.el
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
+
+;; https://github.com/dimitri/switch-window#org1901772
+(use-package switch-window
+  :ensure t
+  :bind (("C-x o" . switch-window)))
 
 (provide 'init-common)
