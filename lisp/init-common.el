@@ -63,4 +63,16 @@
   :ensure t
   :bind (("C-x o" . switch-window)))
 
+;;https://github.com/akicho8/string-inflection
+(use-package string-inflection
+  :ensure t)
+
+(use-package rainbow-delimiters
+  :ensure t
+  :init
+  (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  :config
+  (rainbow-delimiters-mode 1))
+
 (provide 'init-common)

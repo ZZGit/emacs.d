@@ -22,4 +22,7 @@
 ;; 默认窗口最大
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; 自动备份文件路径
+(setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
+
 (provide 'init-basic)
