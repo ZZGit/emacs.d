@@ -1,6 +1,7 @@
 (require 'package)
 
 ;; 国外源
+
 (setq package-archives
      '(("melpa" . "http://melpa.org/packages/")
        ("melpa-stable" . "http://stable.melpa.org/packages/")))
@@ -18,12 +19,10 @@
 
 (package-initialize)
 
-
 ;; use-package
 ;; https://github.com/jwiegley/use-package
 (if (not (package-installed-p 'use-package))
     (progn
-      (package-refresh-contents)
       (package-install 'use-package)))
 (require 'use-package)
 
@@ -63,8 +62,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (rainbow-delimiters string-inflection clj-refactor symbol-overlay js2-refactor ac-js2 company auto-complete projectile switch-window expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package))))
+   '(helm rainbow-delimiters string-inflection clj-refactor symbol-overlay js2-refactor ac-js2 company auto-complete projectile switch-window expand-region paredit exec-path-from-shell cider clojure-mode cnfonts markdown-mode undo-tree web-beautify js2-mode json-mode emmet-mode web-mode spacemacs-theme counsel magit ivy use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

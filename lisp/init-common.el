@@ -1,21 +1,28 @@
 ;;; #init-common.el
 
 ;;; http://oremacs.com/swiper/#installation
-(use-package ivy
-  :ensure t
-  :diminish (ivy-mode . "")
-  :init (ivy-mode 1)
-  :config
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-height 20)
-  (setq ivy-count-format "%d/%d "))
 
-(use-package counsel
+;; (use-package ivy
+;;   :ensure t
+;;   :diminish (ivy-mode . "")
+;;   :init (ivy-mode 1)
+;;   :config
+;;   (setq ivy-use-virtual-buffers t)
+;;   (setq ivy-height 10)
+;;   (setq ivy-count-format "%d/%d "))
+
+;; (use-package counsel
+;;   :ensure t
+;;   :bind*
+;;   (("M-x"     . counsel-M-x)
+;;    ("C-s"     . swiper)
+;;    ))
+
+;; https://emacs-helm.github.io/helm
+(use-package helm
   :ensure t
-  :bind*
-  (("M-x"     . counsel-M-x)
-   ("C-s"     . swiper)
-   ))
+  :init (helm-mode 1)
+  :bind (("M-x" . helm-M-x)))
 
 (use-package ag
   :ensure t)
